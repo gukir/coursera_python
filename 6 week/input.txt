@@ -1,18 +1,22 @@
 PARTIES:
-The first party
-The best party
+Party one
+Party two
+Party three
+Party four
+Party five
+Party six
+Party seven
+Party eight
+Party nine
+Party ten
 VOTES:
-The best party
-The best party
-The best party
-The best party
-The best party
-The best party
-The best party
-The first party
-The best party
-The best party
-The best party
-The best party
-The best party
-The best party
+Party three
+Party five
+Party seven
+Party ten
+Party four
+Party eight
+Party one
+Party two
+Party six
+Party nine
