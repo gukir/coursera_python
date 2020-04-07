@@ -1,4 +1,5 @@
 from sys import stdin
+stdin = open('input.txt', 'r', encoding='utf8')
 
 
 class MatrixError(BaseException):
