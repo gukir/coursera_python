@@ -1,9 +1,6 @@
-m1 = Matrix([[1, 0, 0], [0, 1, 0]])
-m2 = Matrix([[0, 1, 0], [20, 0, -1]])
-print(Matrix.transposed(m1) + Matrix.transposed(m2))
-try:
-    t = Matrix.transposed(m1) + m2
-    print('WA it should be exception')
-except MatrixError as e:
-    print(e.matrix1)
-    print(e.matrix2)
+# Task 4 check 3
+mid = Matrix([[1, 0, 0],[0, 1, 0],[0, 0, 1]])
+m1 = Matrix([[3, 2], [-10, 0], [14, 5]])
+m2 = Matrix([[5, 2, 10], [-0.5, -0.25, 18], [-22, -2.5, -0.125]])
+print(5 * m2)
+print(m2 * (120 * mid * m1))

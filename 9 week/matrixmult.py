@@ -1,4 +1,5 @@
 from sys import stdin
+stdin = open('input.txt', 'r', encoding='utf8')
 
 
 class MatrixError(BaseException):
@@ -61,14 +62,7 @@ class Matrix:
             for n_row in range(self.sz[0]):
                 row_res = []
                 for n_col in range(other.sz[1]):
-                    row_res.append(
-                        sum(
-                            map(
-                                lambda x, y: x * y,
-                                self.data[n_row], tmp_matr.data[n_col]
-                            )
-                        )
-                    )
+                    row_res.append(sum(map(lambda x, y: x * y, self.data[n_row], tmp_matr.data[n_col])))
                 result.append(row_res)
         else:
             raise MatrixError(self, other)
