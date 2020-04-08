@@ -1,6 +1,7 @@
-# Task 4 check 3
-mid = Matrix([[1, 0, 0],[0, 1, 0],[0, 0, 1]])
-m1 = Matrix([[3, 2], [-10, 0], [14, 5]])
-m2 = Matrix([[5, 2, 10], [-0.5, -0.25, 18], [-22, -2.5, -0.125]])
-print(5 * m2)
-print(m2 * (120 * mid * m1))
+# Task 5 check 3
+m = Matrix([[1, 1, 1], [0, 1, 2], [0.5, 1, 1.5]])
+try:
+    s = m.solve([1,1,1])
+    print('WA No solution')
+except Exception as e:
+    print('OK')

@@ -1,4 +1,5 @@
 from sys import stdin
+stdin = open('input.txt', 'r', encoding='utf8')
 
 
 class MatrixError(BaseException):
@@ -85,17 +86,19 @@ class Matrix:
                     n_col += 1
                     continue
                 if row_max != n_row:
-                    b_vec[row_max], b_vec[n_row] = b_vec[n_row], b_vec[row_max]
+                    b_vec[row_max], b_vec[n_row] =\
+                        b_vec[n_row], b_vec[row_max]
                     for o_col in range(new_m.sz[1]):
                         new_m.data[n_row][o_col],\
                             new_m.data[row_max][o_col] = \
                             new_m.data[row_max][o_col],\
                             new_m.data[n_row][o_col]
                 for o_row in range(n_row + 1, new_m.sz[0]):
-                    coeff = new_m.data[o_row][n_col] / new_m.data[n_row][n_col]
+                    coeff =\
+                        new_m.data[o_row][n_col] / new_m.data[n_row][n_col]
                     b_vec[o_row] -= coeff * b_vec[n_row]
                     for o_col in range(new_m.sz[1]):
-                        new_m.data[o_row][o_col] -= \
+                        new_m.data[o_row][o_col] -=\
                             coeff * new_m.data[n_row][o_col]
                 n_col += 1
                 n_row += 1
@@ -107,7 +110,8 @@ class Matrix:
                     left = 0
                     for n_col in range(new_m.sz[1]):
                         left += new_m.data[n_row][n_col] * x[n_col]
-                    x[n_row] = (b_vec[n_row] - left) / new_m.data[n_row][n_row]
+                    x[n_row] =\
+                        (b_vec[n_row] - left) / new_m.data[n_row][n_row]
                 return x
 
     @staticmethod
@@ -133,7 +137,8 @@ class Matrix:
                             new_m.data[row_max][o_col],\
                             new_m.data[n_row][o_col]
                 for o_row in range(n_row + 1, new_m.sz[0]):
-                    coeff = new_m.data[o_row][n_col] / new_m.data[n_row][n_col]
+                    coeff =\
+                        new_m.data[o_row][n_col] / new_m.data[n_row][n_col]
                     for o_col in range(new_m.sz[1]):
                         new_m.data[o_row][o_col] -=\
                             coeff * new_m.data[n_row][o_col]
