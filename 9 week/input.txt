@@ -1,7 +1,19 @@
-# Task 5 check 3
-m = Matrix([[1, 1, 1], [0, 1, 2], [0.5, 1, 1.5]])
-try:
-    s = m.solve([1,1,1])
-    print('WA No solution')
-except Exception as e:
-    print('OK')
+# Task 6 check 3
+m = SquareMatrix([[1, 1, 0, 0, 0, 0],
+                  [0, 1, 1, 0, 0, 0],
+                  [0, 0, 1, 1, 0, 0],
+                  [0, 0, 0, 1, 1, 0],
+                  [0, 0, 0, 0, 1, 1],
+                  [0, 0, 0, 0, 0, 1]]
+                )
+print(m)
+print('----------')
+print(m ** 1)
+print('----------')
+print(m ** 2)
+print('----------')
+print(m ** 3)
+print('----------')
+print(m ** 4)
+print('----------')
+print(m ** 5)
